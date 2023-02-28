@@ -1,0 +1,30 @@
+-- Create a byke store database. 
+
+CREATE TABLE store (ID integer primary key, name text, price$ integer, quantity integer, aisle integer);
+
+INSERT INTO store VALUES
+(1, 'byke', 500, 100, 1),
+(2, 'helmet', 50, 50, 2),
+(3, 'sweatshirt', 30, 300, 3),
+(4, 'shorts', 15, 200, 3),
+(5, 'hoddie', 45, 100, 3),
+(6, 'tires', 30, 80, 1),
+(7, 'seats', 25, 150, 1),
+(8, 'kneepads', 40, 80, 2),
+(9, 'elbow pads', 25, 80, 2),
+(10, 'chains', 75, 40, 1),
+(11, 'gloves', 40, 90, 2),
+(12, 'keychains', 5, 0, 4),
+(13, 'sport glasses', 90, 120, 4),
+(14, 'wheels', 55, 100, 1),
+(15, 'front parts', 80, 50, 1);
+
+--Select the data base order by price without taking into account the aisle and the quantity
+SELECT * FROM store;
+SELECT ID, name, price$ FROM store
+ORDER BY price$;
+
+--Select the data base from aisle 1 and order it by price
+SELECT * FROM store
+WHERE aisle=1
+ORDER BY price$;
